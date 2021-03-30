@@ -1,0 +1,16 @@
+{
+  "name": "striker-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "striker-bot.js",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "striker-bot.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -15,7 +15,7 @@ stream.on('tweet', (tweet) => {
   console.log("tweet detected")
   var tweetID = tweet['id_str']
   var tweetTime = tweet['created_at']
-  client.channels.cache.get('544998477193674791').send(`Striker just tweeted:\n${tweetTime}\n\nhttps://twitter.com/i/status/${tweetID}`)
+  client.channels.cache.get('826437818964246539').send(`Striker just tweeted:\n${tweetTime}\n\nhttps://twitter.com/i/status/${tweetID}`)
 });
 
 

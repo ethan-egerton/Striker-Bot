@@ -9,7 +9,7 @@ var T = new Twit({
   access_token_secret:  'accesstokensecret',
 })
 
-var stream = T.stream('statuses/filter', { follow: ['1231972210769907717'] });
+var stream = T.stream('statuses/filter', { follow: ['975808798463086592'] });
 
 stream.on('tweet', (tweet) => {
   console.log("tweet detected")

@@ -21,4 +21,4 @@ stream.on('tweet', (tweet) => {
 
 console.log('Online');
 
-client.login('ODI2MjU3NzE4MjY3NDc4MDI3.YGJ2dw._ZE2nEeB77EgHhEYBt-yGCxmbs4');
+client.login('token');

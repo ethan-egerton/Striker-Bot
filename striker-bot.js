@@ -2,11 +2,16 @@ var Twit = require('twit');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.on('ready', () => {
+	client.user.setActivity("JoJo's Bizarre Adventure", { type: 'WATCHING' });
+	console.log('Discord Bot ready');
+})
+
 var T = new Twit({
-  consumer_key:         'consumerkey',
-  consumer_secret:      'consumersecret',
-  access_token:         'accesstoken',
-  access_token_secret:  'accesstokensecret',
+  consumer_key:         '••••',
+  consumer_secret:      '••••',
+  access_token:         '••••',
+  access_token_secret:  '••••',
 })
 
 var stream = T.stream('statuses/filter', { follow: ['975808798463086592'] });
@@ -28,13 +33,13 @@ stream.on('tweet', (tweet) => {
   var tweetSourceSliced = tweetSource.slice(i, (tweetSource.length - 4))
 
   if (tweetRetweeted == null) {
-    client.channels.cache.get('544998477193674791').send(`Striker just tweeted:\nPosted at ${tweetTime}\nSent from ${tweetSourceSliced}\n\nhttps://twitter.com/i/status/${tweetID}`)
+    client.channels.cache.get('••••').send(`Striker just tweeted:\nPosted at ${tweetTime}\nSent from ${tweetSourceSliced}\n\nhttps://twitter.com/i/status/${tweetID}`)
   } else {
-    client.channels.cache.get('544998477193674791').send(`Striker just retweeted:\nRetweeted at ${tweetTime}\n\nhttps://twitter.com/i/status/${tweetID}`) 
+    client.channels.cache.get('••••').send(`Striker just retweeted:\nRetweeted at ${tweetTime}\n\nhttps://twitter.com/i/status/${tweetID}`) 
   }
 });
 
 
 console.log('Online');
 
-client.login('token');
+client.login('••••');

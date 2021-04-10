@@ -8,3 +8,5 @@ This Discord application streams data from the twitter user [@Striker729](https:
 npm i discord.js
 npm i twit
 ```
+
+## 

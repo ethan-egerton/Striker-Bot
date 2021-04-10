@@ -19,7 +19,7 @@ var stream = T.stream('statuses/filter', { follow: [trackID] });
 
 stream.on('tweet', (tweet) => {
   try {
-    var tweetRetweeted = tweet['retweeted_status']
+    var tweetRetweeted = tweet['retweeted_status'];
   } catch (error) {}
   var tweetID = tweet['id_str'];
   var tweetTime = tweet['created_at'];
@@ -34,12 +34,13 @@ stream.on('tweet', (tweet) => {
   };
   var tweetSourceSliced = tweetSource.slice(i, (tweetSource.length - 4));
 
-  if (tweeterID == trackID)  
+  if (tweeterID == trackID) {
     if (tweetRetweeted == null) {
       client.channels.cache.get('••••').send(`Striker just tweeted:\nPosted at ${tweetTime}\nSent from ${tweetSourceSliced}\n\nhttps://twitter.com/i/status/${tweetID}`);
     } else {
       client.channels.cache.get('••••').send(`Striker just retweeted:\nRetweeted at ${tweetTime}\n\nhttps://twitter.com/i/status/${tweetID}`);
     };
+  };
 });
 
 console.log('Online');
